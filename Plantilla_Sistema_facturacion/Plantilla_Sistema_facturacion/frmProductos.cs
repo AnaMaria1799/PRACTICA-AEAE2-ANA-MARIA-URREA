@@ -16,5 +16,15 @@ namespace Plantilla_Sistema_facturacion
         {
             InitializeComponent();
         }
+
+        private void BtnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnGuardarProducto_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -29,18 +29,18 @@
         private void InitializeComponent()
         {
             this.BtnSalir = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.btnActualizar = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.btnGuardarProducto = new MaterialSkin.Controls.MaterialRaisedButton();
             this.txtCantidadStock = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.txtPrecioVenta = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.txtPrecioCompra = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.txtCodigoRef = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.txtNombreProducto = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.lblTitulo = new MaterialSkin.Controls.MaterialLabel();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.lblCategoria = new MaterialSkin.Controls.MaterialLabel();
             this.txtRutaImagen = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.lblDetalleProducto = new MaterialSkin.Controls.MaterialLabel();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.lblDatosProductos = new MaterialSkin.Controls.MaterialLabel();
             this.SuspendLayout();
             // 
             // BtnSalir
@@ -54,18 +54,20 @@
             this.BtnSalir.TabIndex = 19;
             this.BtnSalir.Text = "Salir";
             this.BtnSalir.UseVisualStyleBackColor = true;
+            this.BtnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
             // 
-            // btnActualizar
+            // btnGuardarProducto
             // 
-            this.btnActualizar.Depth = 0;
-            this.btnActualizar.Location = new System.Drawing.Point(148, 362);
-            this.btnActualizar.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Primary = true;
-            this.btnActualizar.Size = new System.Drawing.Size(130, 29);
-            this.btnActualizar.TabIndex = 18;
-            this.btnActualizar.Text = "Actualizar";
-            this.btnActualizar.UseVisualStyleBackColor = true;
+            this.btnGuardarProducto.Depth = 0;
+            this.btnGuardarProducto.Location = new System.Drawing.Point(148, 362);
+            this.btnGuardarProducto.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnGuardarProducto.Name = "btnGuardarProducto";
+            this.btnGuardarProducto.Primary = true;
+            this.btnGuardarProducto.Size = new System.Drawing.Size(130, 29);
+            this.btnGuardarProducto.TabIndex = 18;
+            this.btnGuardarProducto.Text = "Guardar";
+            this.btnGuardarProducto.UseVisualStyleBackColor = true;
+            this.btnGuardarProducto.Click += new System.EventHandler(this.btnGuardarProducto_Click);
             // 
             // txtCantidadStock
             // 
@@ -142,19 +144,6 @@
             this.txtNombreProducto.TabIndex = 13;
             this.txtNombreProducto.UseSystemPasswordChar = false;
             // 
-            // lblTitulo
-            // 
-            this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Depth = 0;
-            this.lblTitulo.Font = new System.Drawing.Font("Roboto", 11F);
-            this.lblTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblTitulo.Location = new System.Drawing.Point(169, 31);
-            this.lblTitulo.MouseState = MaterialSkin.MouseState.HOVER;
-            this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(246, 19);
-            this.lblTitulo.TabIndex = 12;
-            this.lblTitulo.Text = "ADMINISTRACIÓN DE PRODUCTOS";
-            // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
@@ -212,24 +201,37 @@
             this.textBox1.Size = new System.Drawing.Size(243, 97);
             this.textBox1.TabIndex = 24;
             // 
+            // lblDatosProductos
+            // 
+            this.lblDatosProductos.AutoSize = true;
+            this.lblDatosProductos.Depth = 0;
+            this.lblDatosProductos.Font = new System.Drawing.Font("Roboto", 11F);
+            this.lblDatosProductos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblDatosProductos.Location = new System.Drawing.Point(239, 30);
+            this.lblDatosProductos.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lblDatosProductos.Name = "lblDatosProductos";
+            this.lblDatosProductos.Size = new System.Drawing.Size(147, 19);
+            this.lblDatosProductos.TabIndex = 25;
+            this.lblDatosProductos.Text = "DATOS PRODUCTOS";
+            // 
             // frmProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(623, 418);
+            this.Controls.Add(this.lblDatosProductos);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.lblDetalleProducto);
             this.Controls.Add(this.txtRutaImagen);
             this.Controls.Add(this.lblCategoria);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.BtnSalir);
-            this.Controls.Add(this.btnActualizar);
+            this.Controls.Add(this.btnGuardarProducto);
             this.Controls.Add(this.txtCantidadStock);
             this.Controls.Add(this.txtPrecioVenta);
             this.Controls.Add(this.txtPrecioCompra);
             this.Controls.Add(this.txtCodigoRef);
             this.Controls.Add(this.txtNombreProducto);
-            this.Controls.Add(this.lblTitulo);
             this.Name = "frmProductos";
             this.Text = "frmProductos";
             this.ResumeLayout(false);
@@ -240,17 +242,17 @@
         #endregion
 
         private MaterialSkin.Controls.MaterialRaisedButton BtnSalir;
-        private MaterialSkin.Controls.MaterialRaisedButton btnActualizar;
+        private MaterialSkin.Controls.MaterialRaisedButton btnGuardarProducto;
         private MaterialSkin.Controls.MaterialSingleLineTextField txtCantidadStock;
         private MaterialSkin.Controls.MaterialSingleLineTextField txtPrecioVenta;
         private MaterialSkin.Controls.MaterialSingleLineTextField txtPrecioCompra;
         private MaterialSkin.Controls.MaterialSingleLineTextField txtCodigoRef;
         private MaterialSkin.Controls.MaterialSingleLineTextField txtNombreProducto;
-        private MaterialSkin.Controls.MaterialLabel lblTitulo;
         private System.Windows.Forms.ComboBox comboBox1;
         private MaterialSkin.Controls.MaterialLabel lblCategoria;
         private MaterialSkin.Controls.MaterialSingleLineTextField txtRutaImagen;
         private MaterialSkin.Controls.MaterialLabel lblDetalleProducto;
         private System.Windows.Forms.TextBox textBox1;
+        private MaterialSkin.Controls.MaterialLabel lblDatosProductos;
     }
 }

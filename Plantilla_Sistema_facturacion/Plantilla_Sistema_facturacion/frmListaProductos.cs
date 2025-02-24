@@ -17,9 +17,11 @@ namespace Plantilla_Sistema_facturacion
             InitializeComponent();
         }
 
-        private void lblTitulo_Click(object sender, EventArgs e)
-        {
 
+        private void btnNuevoProducto_Click(object sender, EventArgs e)
+        {
+            frmProductos frmProductos = new frmProductos();
+            frmProductos.Show();
         }
     }
 }

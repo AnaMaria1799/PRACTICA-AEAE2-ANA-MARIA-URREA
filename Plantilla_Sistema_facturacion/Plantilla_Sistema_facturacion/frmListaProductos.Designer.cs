@@ -32,22 +32,24 @@
             this.BtnSalir = new MaterialSkin.Controls.MaterialRaisedButton();
             this.BtnBuscar = new MaterialSkin.Controls.MaterialRaisedButton();
             this.txtBuscarProductos = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.lblTitulo = new MaterialSkin.Controls.MaterialLabel();
+            this.lblAdminProductos = new MaterialSkin.Controls.MaterialLabel();
+            this.btnEditarProducto = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.btnNuevoProducto = new MaterialSkin.Controls.MaterialRaisedButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgClientes)).BeginInit();
             this.SuspendLayout();
             // 
             // dgClientes
             // 
             this.dgClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgClientes.Location = new System.Drawing.Point(90, 199);
+            this.dgClientes.Location = new System.Drawing.Point(23, 188);
             this.dgClientes.Name = "dgClientes";
-            this.dgClientes.Size = new System.Drawing.Size(231, 85);
+            this.dgClientes.Size = new System.Drawing.Size(425, 192);
             this.dgClientes.TabIndex = 22;
             // 
             // BtnSalir
             // 
             this.BtnSalir.Depth = 0;
-            this.BtnSalir.Location = new System.Drawing.Point(175, 371);
+            this.BtnSalir.Location = new System.Drawing.Point(257, 400);
             this.BtnSalir.MouseState = MaterialSkin.MouseState.HOVER;
             this.BtnSalir.Name = "BtnSalir";
             this.BtnSalir.Primary = true;
@@ -59,7 +61,7 @@
             // BtnBuscar
             // 
             this.BtnBuscar.Depth = 0;
-            this.BtnBuscar.Location = new System.Drawing.Point(293, 122);
+            this.BtnBuscar.Location = new System.Drawing.Point(228, 122);
             this.BtnBuscar.MouseState = MaterialSkin.MouseState.HOVER;
             this.BtnBuscar.Name = "BtnBuscar";
             this.BtnBuscar.Primary = true;
@@ -83,30 +85,56 @@
             this.txtBuscarProductos.TabIndex = 19;
             this.txtBuscarProductos.UseSystemPasswordChar = false;
             // 
-            // lblTitulo
+            // lblAdminProductos
             // 
-            this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Depth = 0;
-            this.lblTitulo.Font = new System.Drawing.Font("Roboto", 11F);
-            this.lblTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblTitulo.Location = new System.Drawing.Point(154, 34);
-            this.lblTitulo.MouseState = MaterialSkin.MouseState.HOVER;
-            this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(139, 19);
-            this.lblTitulo.TabIndex = 18;
-            this.lblTitulo.Text = "LISTA PRODUCTOS";
-            this.lblTitulo.Click += new System.EventHandler(this.lblTitulo_Click);
+            this.lblAdminProductos.AutoSize = true;
+            this.lblAdminProductos.Depth = 0;
+            this.lblAdminProductos.Font = new System.Drawing.Font("Roboto", 11F);
+            this.lblAdminProductos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblAdminProductos.Location = new System.Drawing.Point(168, 37);
+            this.lblAdminProductos.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lblAdminProductos.Name = "lblAdminProductos";
+            this.lblAdminProductos.Size = new System.Drawing.Size(246, 19);
+            this.lblAdminProductos.TabIndex = 23;
+            this.lblAdminProductos.Text = "ADMINISTRACIÓN DE PRODUCTOS";
+            // 
+            // btnEditarProducto
+            // 
+            this.btnEditarProducto.Depth = 0;
+            this.btnEditarProducto.Location = new System.Drawing.Point(469, 255);
+            this.btnEditarProducto.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnEditarProducto.Name = "btnEditarProducto";
+            this.btnEditarProducto.Primary = true;
+            this.btnEditarProducto.Size = new System.Drawing.Size(74, 26);
+            this.btnEditarProducto.TabIndex = 25;
+            this.btnEditarProducto.Text = "Editar";
+            this.btnEditarProducto.UseVisualStyleBackColor = true;
+            // 
+            // btnNuevoProducto
+            // 
+            this.btnNuevoProducto.Depth = 0;
+            this.btnNuevoProducto.Location = new System.Drawing.Point(389, 122);
+            this.btnNuevoProducto.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnNuevoProducto.Name = "btnNuevoProducto";
+            this.btnNuevoProducto.Primary = true;
+            this.btnNuevoProducto.Size = new System.Drawing.Size(74, 26);
+            this.btnNuevoProducto.TabIndex = 24;
+            this.btnNuevoProducto.Text = "Nuevo";
+            this.btnNuevoProducto.UseVisualStyleBackColor = true;
+            this.btnNuevoProducto.Click += new System.EventHandler(this.btnNuevoProducto_Click);
             // 
             // frmListaProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(440, 445);
+            this.ClientSize = new System.Drawing.Size(561, 451);
+            this.Controls.Add(this.btnEditarProducto);
+            this.Controls.Add(this.btnNuevoProducto);
+            this.Controls.Add(this.lblAdminProductos);
             this.Controls.Add(this.dgClientes);
             this.Controls.Add(this.BtnSalir);
             this.Controls.Add(this.BtnBuscar);
             this.Controls.Add(this.txtBuscarProductos);
-            this.Controls.Add(this.lblTitulo);
             this.Name = "frmListaProductos";
             this.Text = "frmListaProductos";
             ((System.ComponentModel.ISupportInitialize)(this.dgClientes)).EndInit();
@@ -121,6 +149,8 @@
         private MaterialSkin.Controls.MaterialRaisedButton BtnSalir;
         private MaterialSkin.Controls.MaterialRaisedButton BtnBuscar;
         private MaterialSkin.Controls.MaterialSingleLineTextField txtBuscarProductos;
-        private MaterialSkin.Controls.MaterialLabel lblTitulo;
+        private MaterialSkin.Controls.MaterialLabel lblAdminProductos;
+        private MaterialSkin.Controls.MaterialRaisedButton btnEditarProducto;
+        private MaterialSkin.Controls.MaterialRaisedButton btnNuevoProducto;
     }
 }
