@@ -150,7 +150,7 @@
             // BtnNuevo
             // 
             this.BtnNuevo.Depth = 0;
-            this.BtnNuevo.Location = new System.Drawing.Point(632, 96);
+            this.BtnNuevo.Location = new System.Drawing.Point(609, 96);
             this.BtnNuevo.MouseState = MaterialSkin.MouseState.HOVER;
             this.BtnNuevo.Name = "BtnNuevo";
             this.BtnNuevo.Primary = true;
@@ -162,7 +162,7 @@
             // btnActualizar
             // 
             this.btnActualizar.Depth = 0;
-            this.btnActualizar.Location = new System.Drawing.Point(632, 146);
+            this.btnActualizar.Location = new System.Drawing.Point(609, 146);
             this.btnActualizar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Primary = true;
@@ -174,7 +174,7 @@
             // BtnEliminar
             // 
             this.BtnEliminar.Depth = 0;
-            this.BtnEliminar.Location = new System.Drawing.Point(632, 196);
+            this.BtnEliminar.Location = new System.Drawing.Point(609, 196);
             this.BtnEliminar.MouseState = MaterialSkin.MouseState.HOVER;
             this.BtnEliminar.Name = "BtnEliminar";
             this.BtnEliminar.Primary = true;
