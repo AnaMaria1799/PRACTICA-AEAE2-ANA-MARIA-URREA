@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.BtnSalir = new MaterialSkin.Controls.MaterialRaisedButton();
             this.btnGuardarProducto = new MaterialSkin.Controls.MaterialRaisedButton();
             this.txtCantidadStock = new MaterialSkin.Controls.MaterialSingleLineTextField();
@@ -41,6 +42,8 @@
             this.lblDetalleProducto = new MaterialSkin.Controls.MaterialLabel();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.lblDatosProductos = new MaterialSkin.Controls.MaterialLabel();
+            this.campoVacioErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.campoVacioErrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // BtnSalir
@@ -214,6 +217,10 @@
             this.lblDatosProductos.TabIndex = 25;
             this.lblDatosProductos.Text = "DATOS PRODUCTOS";
             // 
+            // campoVacioErrorProvider
+            // 
+            this.campoVacioErrorProvider.ContainerControl = this;
+            // 
             // frmProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -234,6 +241,7 @@
             this.Controls.Add(this.txtNombreProducto);
             this.Name = "frmProductos";
             this.Text = "frmProductos";
+            ((System.ComponentModel.ISupportInitialize)(this.campoVacioErrorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -254,5 +262,6 @@
         private MaterialSkin.Controls.MaterialLabel lblDetalleProducto;
         private System.Windows.Forms.TextBox textBox1;
         private MaterialSkin.Controls.MaterialLabel lblDatosProductos;
+        private System.Windows.Forms.ErrorProvider campoVacioErrorProvider;
     }
 }

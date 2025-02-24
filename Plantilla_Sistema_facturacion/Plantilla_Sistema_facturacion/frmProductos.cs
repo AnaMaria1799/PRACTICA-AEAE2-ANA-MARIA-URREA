@@ -24,7 +24,34 @@ namespace Plantilla_Sistema_facturacion
 
         private void btnGuardarProducto_Click(object sender, EventArgs e)
         {
-            this.Close();
+            if (txtNombreProducto.Text == "")
+            {
+                campoVacioErrorProvider.SetError(txtNombreProducto, "El nombre no puede ser vacío");
+            }
+            else
+            {
+                campoVacioErrorProvider.SetError(txtNombreProducto, "");
+            }
+
+
+            if (txtCodigoRef.Text == "")
+            {
+                campoVacioErrorProvider.SetError(txtCodigoRef, "El codigo de referencia no puede ser vacío");
+            }
+            else
+            {
+                campoVacioErrorProvider.SetError(txtCodigoRef, "");
+            }
+
+
+            if (txtCantidadStock.Text == "")
+            {
+                campoVacioErrorProvider.SetError(txtCantidadStock, "Cantidad Stock no puede ser vacío");
+            }
+            else
+            {
+                campoVacioErrorProvider.SetError(txtCantidadStock, "");
+            }
         }
     }
 }
