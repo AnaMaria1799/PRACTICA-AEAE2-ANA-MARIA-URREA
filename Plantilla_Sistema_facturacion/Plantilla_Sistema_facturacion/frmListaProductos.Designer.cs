@@ -1,6 +1,6 @@
 ﻿namespace Plantilla_Sistema_facturacion
 {
-    partial class frmListaClientes
+    partial class frmListaProductos
     {
         /// <summary>
         /// Required designer variable.
@@ -31,7 +31,7 @@
             this.dgClientes = new System.Windows.Forms.DataGridView();
             this.BtnSalir = new MaterialSkin.Controls.MaterialRaisedButton();
             this.BtnBuscar = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.txtBuscar = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.txtBuscarProductos = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.lblTitulo = new MaterialSkin.Controls.MaterialLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dgClientes)).BeginInit();
             this.SuspendLayout();
@@ -39,49 +39,49 @@
             // dgClientes
             // 
             this.dgClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgClientes.Location = new System.Drawing.Point(108, 197);
+            this.dgClientes.Location = new System.Drawing.Point(90, 199);
             this.dgClientes.Name = "dgClientes";
             this.dgClientes.Size = new System.Drawing.Size(231, 85);
-            this.dgClientes.TabIndex = 17;
+            this.dgClientes.TabIndex = 22;
             // 
             // BtnSalir
             // 
             this.BtnSalir.Depth = 0;
-            this.BtnSalir.Location = new System.Drawing.Point(193, 369);
+            this.BtnSalir.Location = new System.Drawing.Point(175, 371);
             this.BtnSalir.MouseState = MaterialSkin.MouseState.HOVER;
             this.BtnSalir.Name = "BtnSalir";
             this.BtnSalir.Primary = true;
             this.BtnSalir.Size = new System.Drawing.Size(74, 26);
-            this.BtnSalir.TabIndex = 16;
+            this.BtnSalir.TabIndex = 21;
             this.BtnSalir.Text = "Salir";
             this.BtnSalir.UseVisualStyleBackColor = true;
             // 
             // BtnBuscar
             // 
             this.BtnBuscar.Depth = 0;
-            this.BtnBuscar.Location = new System.Drawing.Point(311, 120);
+            this.BtnBuscar.Location = new System.Drawing.Point(293, 122);
             this.BtnBuscar.MouseState = MaterialSkin.MouseState.HOVER;
             this.BtnBuscar.Name = "BtnBuscar";
             this.BtnBuscar.Primary = true;
             this.BtnBuscar.Size = new System.Drawing.Size(74, 26);
-            this.BtnBuscar.TabIndex = 15;
+            this.BtnBuscar.TabIndex = 20;
             this.BtnBuscar.Text = "Buscar";
             this.BtnBuscar.UseVisualStyleBackColor = true;
             // 
-            // txtBuscar
+            // txtBuscarProductos
             // 
-            this.txtBuscar.Depth = 0;
-            this.txtBuscar.Hint = "Buscar cliente";
-            this.txtBuscar.Location = new System.Drawing.Point(41, 120);
-            this.txtBuscar.MouseState = MaterialSkin.MouseState.HOVER;
-            this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.PasswordChar = '\0';
-            this.txtBuscar.SelectedText = "";
-            this.txtBuscar.SelectionLength = 0;
-            this.txtBuscar.SelectionStart = 0;
-            this.txtBuscar.Size = new System.Drawing.Size(193, 23);
-            this.txtBuscar.TabIndex = 14;
-            this.txtBuscar.UseSystemPasswordChar = false;
+            this.txtBuscarProductos.Depth = 0;
+            this.txtBuscarProductos.Hint = "Buscar productos";
+            this.txtBuscarProductos.Location = new System.Drawing.Point(23, 122);
+            this.txtBuscarProductos.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtBuscarProductos.Name = "txtBuscarProductos";
+            this.txtBuscarProductos.PasswordChar = '\0';
+            this.txtBuscarProductos.SelectedText = "";
+            this.txtBuscarProductos.SelectionLength = 0;
+            this.txtBuscarProductos.SelectionStart = 0;
+            this.txtBuscarProductos.Size = new System.Drawing.Size(193, 23);
+            this.txtBuscarProductos.TabIndex = 19;
+            this.txtBuscarProductos.UseSystemPasswordChar = false;
             // 
             // lblTitulo
             // 
@@ -89,25 +89,26 @@
             this.lblTitulo.Depth = 0;
             this.lblTitulo.Font = new System.Drawing.Font("Roboto", 11F);
             this.lblTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblTitulo.Location = new System.Drawing.Point(104, 33);
+            this.lblTitulo.Location = new System.Drawing.Point(154, 34);
             this.lblTitulo.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(229, 19);
-            this.lblTitulo.TabIndex = 13;
-            this.lblTitulo.Text = "ADMINISTRACIÓN DE CLIENTES";
+            this.lblTitulo.Size = new System.Drawing.Size(139, 19);
+            this.lblTitulo.TabIndex = 18;
+            this.lblTitulo.Text = "LISTA PRODUCTOS";
+            this.lblTitulo.Click += new System.EventHandler(this.lblTitulo_Click);
             // 
-            // frmListaClientes
+            // frmListaProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(436, 425);
+            this.ClientSize = new System.Drawing.Size(440, 445);
             this.Controls.Add(this.dgClientes);
             this.Controls.Add(this.BtnSalir);
             this.Controls.Add(this.BtnBuscar);
-            this.Controls.Add(this.txtBuscar);
+            this.Controls.Add(this.txtBuscarProductos);
             this.Controls.Add(this.lblTitulo);
-            this.Name = "frmListaClientes";
-            this.Text = "frmListaClientes";
+            this.Name = "frmListaProductos";
+            this.Text = "frmListaProductos";
             ((System.ComponentModel.ISupportInitialize)(this.dgClientes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -119,7 +120,7 @@
         private System.Windows.Forms.DataGridView dgClientes;
         private MaterialSkin.Controls.MaterialRaisedButton BtnSalir;
         private MaterialSkin.Controls.MaterialRaisedButton BtnBuscar;
-        private MaterialSkin.Controls.MaterialSingleLineTextField txtBuscar;
+        private MaterialSkin.Controls.MaterialSingleLineTextField txtBuscarProductos;
         private MaterialSkin.Controls.MaterialLabel lblTitulo;
     }
 }
