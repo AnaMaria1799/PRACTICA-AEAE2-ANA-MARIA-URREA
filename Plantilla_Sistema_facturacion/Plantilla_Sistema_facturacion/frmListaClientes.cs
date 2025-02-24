@@ -16,5 +16,17 @@ namespace Plantilla_Sistema_facturacion
         {
             InitializeComponent();
         }
+
+        private void btnNuevoCliente_Click(object sender, EventArgs e)
+        {
+            FrmClientes frmClientes = new FrmClientes();
+            frmClientes.Show();
+        }
+
+        private void btnEditarCliente_Click(object sender, EventArgs e)
+        {
+            FrmClientes frmClientes = new FrmClientes();
+            frmClientes.Show();
+        }
     }
 }

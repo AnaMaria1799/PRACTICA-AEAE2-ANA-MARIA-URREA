@@ -33,21 +33,23 @@
             this.BtnBuscar = new MaterialSkin.Controls.MaterialRaisedButton();
             this.txtBuscar = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.lblTitulo = new MaterialSkin.Controls.MaterialLabel();
+            this.btnNuevoCliente = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.btnEditarCliente = new MaterialSkin.Controls.MaterialRaisedButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgClientes)).BeginInit();
             this.SuspendLayout();
             // 
             // dgClientes
             // 
             this.dgClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgClientes.Location = new System.Drawing.Point(108, 197);
+            this.dgClientes.Location = new System.Drawing.Point(41, 164);
             this.dgClientes.Name = "dgClientes";
-            this.dgClientes.Size = new System.Drawing.Size(231, 85);
+            this.dgClientes.Size = new System.Drawing.Size(414, 194);
             this.dgClientes.TabIndex = 17;
             // 
             // BtnSalir
             // 
             this.BtnSalir.Depth = 0;
-            this.BtnSalir.Location = new System.Drawing.Point(193, 369);
+            this.BtnSalir.Location = new System.Drawing.Point(295, 397);
             this.BtnSalir.MouseState = MaterialSkin.MouseState.HOVER;
             this.BtnSalir.Name = "BtnSalir";
             this.BtnSalir.Primary = true;
@@ -59,7 +61,7 @@
             // BtnBuscar
             // 
             this.BtnBuscar.Depth = 0;
-            this.BtnBuscar.Location = new System.Drawing.Point(311, 120);
+            this.BtnBuscar.Location = new System.Drawing.Point(268, 120);
             this.BtnBuscar.MouseState = MaterialSkin.MouseState.HOVER;
             this.BtnBuscar.Name = "BtnBuscar";
             this.BtnBuscar.Primary = true;
@@ -96,11 +98,39 @@
             this.lblTitulo.TabIndex = 13;
             this.lblTitulo.Text = "ADMINISTRACIÓN DE CLIENTES";
             // 
+            // btnNuevoCliente
+            // 
+            this.btnNuevoCliente.Depth = 0;
+            this.btnNuevoCliente.Location = new System.Drawing.Point(418, 120);
+            this.btnNuevoCliente.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnNuevoCliente.Name = "btnNuevoCliente";
+            this.btnNuevoCliente.Primary = true;
+            this.btnNuevoCliente.Size = new System.Drawing.Size(74, 26);
+            this.btnNuevoCliente.TabIndex = 18;
+            this.btnNuevoCliente.Text = "Nuevo";
+            this.btnNuevoCliente.UseVisualStyleBackColor = true;
+            this.btnNuevoCliente.Click += new System.EventHandler(this.btnNuevoCliente_Click);
+            // 
+            // btnEditarCliente
+            // 
+            this.btnEditarCliente.Depth = 0;
+            this.btnEditarCliente.Location = new System.Drawing.Point(489, 244);
+            this.btnEditarCliente.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnEditarCliente.Name = "btnEditarCliente";
+            this.btnEditarCliente.Primary = true;
+            this.btnEditarCliente.Size = new System.Drawing.Size(74, 26);
+            this.btnEditarCliente.TabIndex = 19;
+            this.btnEditarCliente.Text = "Editar";
+            this.btnEditarCliente.UseVisualStyleBackColor = true;
+            this.btnEditarCliente.Click += new System.EventHandler(this.btnEditarCliente_Click);
+            // 
             // frmListaClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(436, 425);
+            this.ClientSize = new System.Drawing.Size(592, 445);
+            this.Controls.Add(this.btnEditarCliente);
+            this.Controls.Add(this.btnNuevoCliente);
             this.Controls.Add(this.dgClientes);
             this.Controls.Add(this.BtnSalir);
             this.Controls.Add(this.BtnBuscar);
@@ -121,5 +151,7 @@
         private MaterialSkin.Controls.MaterialRaisedButton BtnBuscar;
         private MaterialSkin.Controls.MaterialSingleLineTextField txtBuscar;
         private MaterialSkin.Controls.MaterialLabel lblTitulo;
+        private MaterialSkin.Controls.MaterialRaisedButton btnNuevoCliente;
+        private MaterialSkin.Controls.MaterialRaisedButton btnEditarCliente;
     }
 }
