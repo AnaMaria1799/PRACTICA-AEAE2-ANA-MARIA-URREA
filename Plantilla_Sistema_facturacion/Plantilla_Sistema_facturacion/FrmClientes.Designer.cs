@@ -28,28 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblTitulo = new MaterialSkin.Controls.MaterialLabel();
+            this.lblDatosCliente = new MaterialSkin.Controls.MaterialLabel();
             this.txtNombre = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.txtDocumento = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.txtDireccion = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.txtTelefono = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.txtEmail = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.btnActualizar = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.btnGuardar = new MaterialSkin.Controls.MaterialRaisedButton();
             this.BtnSalir = new MaterialSkin.Controls.MaterialRaisedButton();
             this.SuspendLayout();
             // 
-            // lblTitulo
+            // lblDatosCliente
             // 
-            this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Depth = 0;
-            this.lblTitulo.Font = new System.Drawing.Font("Roboto", 11F);
-            this.lblTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblTitulo.Location = new System.Drawing.Point(123, 31);
-            this.lblTitulo.MouseState = MaterialSkin.MouseState.HOVER;
-            this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(196, 19);
-            this.lblTitulo.TabIndex = 0;
-            this.lblTitulo.Text = "NUEVO REGISTRO CLIENTE";
+            this.lblDatosCliente.AutoSize = true;
+            this.lblDatosCliente.Depth = 0;
+            this.lblDatosCliente.Font = new System.Drawing.Font("Roboto", 11F);
+            this.lblDatosCliente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblDatosCliente.Location = new System.Drawing.Point(147, 36);
+            this.lblDatosCliente.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lblDatosCliente.Name = "lblDatosCliente";
+            this.lblDatosCliente.Size = new System.Drawing.Size(121, 19);
+            this.lblDatosCliente.TabIndex = 0;
+            this.lblDatosCliente.Text = "DATOS CLIENTE";
             // 
             // txtNombre
             // 
@@ -126,17 +126,18 @@
             this.txtEmail.TabIndex = 5;
             this.txtEmail.UseSystemPasswordChar = false;
             // 
-            // btnActualizar
+            // btnGuardar
             // 
-            this.btnActualizar.Depth = 0;
-            this.btnActualizar.Location = new System.Drawing.Point(76, 354);
-            this.btnActualizar.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Primary = true;
-            this.btnActualizar.Size = new System.Drawing.Size(97, 29);
-            this.btnActualizar.TabIndex = 8;
-            this.btnActualizar.Text = "Actualizar";
-            this.btnActualizar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Depth = 0;
+            this.btnGuardar.Location = new System.Drawing.Point(76, 354);
+            this.btnGuardar.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Primary = true;
+            this.btnGuardar.Size = new System.Drawing.Size(97, 29);
+            this.btnGuardar.TabIndex = 8;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // BtnSalir
             // 
@@ -149,6 +150,7 @@
             this.BtnSalir.TabIndex = 11;
             this.BtnSalir.Text = "Salir";
             this.BtnSalir.UseVisualStyleBackColor = true;
+            this.BtnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
             // 
             // FrmClientes
             // 
@@ -156,13 +158,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(458, 439);
             this.Controls.Add(this.BtnSalir);
-            this.Controls.Add(this.btnActualizar);
+            this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.txtTelefono);
             this.Controls.Add(this.txtDireccion);
             this.Controls.Add(this.txtDocumento);
             this.Controls.Add(this.txtNombre);
-            this.Controls.Add(this.lblTitulo);
+            this.Controls.Add(this.lblDatosCliente);
             this.Name = "FrmClientes";
             this.Text = "FrmClientes";
             this.ResumeLayout(false);
@@ -172,13 +174,13 @@
 
         #endregion
 
-        private MaterialSkin.Controls.MaterialLabel lblTitulo;
+        private MaterialSkin.Controls.MaterialLabel lblDatosCliente;
         private MaterialSkin.Controls.MaterialSingleLineTextField txtNombre;
         private MaterialSkin.Controls.MaterialSingleLineTextField txtDocumento;
         private MaterialSkin.Controls.MaterialSingleLineTextField txtDireccion;
         private MaterialSkin.Controls.MaterialSingleLineTextField txtTelefono;
         private MaterialSkin.Controls.MaterialSingleLineTextField txtEmail;
-        private MaterialSkin.Controls.MaterialRaisedButton btnActualizar;
+        private MaterialSkin.Controls.MaterialRaisedButton btnGuardar;
         private MaterialSkin.Controls.MaterialRaisedButton BtnSalir;
     }
 }
