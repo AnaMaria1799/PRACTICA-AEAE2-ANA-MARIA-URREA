@@ -73,6 +73,26 @@ namespace Plantilla_Sistema_facturacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cart {
+            get {
+                object obj = ResourceManager.GetObject("cart", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap chat__1_ {
+            get {
+                object obj = ResourceManager.GetObject("chat (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap customer {
             get {
                 object obj = ResourceManager.GetObject("customer", resourceCulture);
@@ -86,6 +106,16 @@ namespace Plantilla_Sistema_facturacion.Properties {
         internal static System.Drawing.Bitmap exit {
             get {
                 object obj = ResourceManager.GetObject("exit", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap help_web_button {
+            get {
+                object obj = ResourceManager.GetObject("help-web-button", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -127,6 +157,16 @@ namespace Plantilla_Sistema_facturacion.Properties {
             get {
                 object obj = ResourceManager.GetObject("png-clipart-logo-company-business-creative-company-logo-free-logo-design-template" +
                         "-company", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap stats {
+            get {
+                object obj = ResourceManager.GetObject("stats", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

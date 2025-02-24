@@ -28,40 +28,38 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.WebBrowser webBrowser1;
             this.PnlPrincipal = new System.Windows.Forms.Panel();
             this.PnlContenedor = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.PnlMenu = new System.Windows.Forms.Panel();
             this.TpbMenu = new MaterialSkin.Controls.MaterialTabControl();
             this.Principal = new System.Windows.Forms.TabPage();
-            this.btnSalir = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Tablas = new System.Windows.Forms.TabPage();
-            this.btnClientes = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.Facturacion = new System.Windows.Forms.TabPage();
             this.Seguridad = new System.Windows.Forms.TabPage();
             this.Acerca = new System.Windows.Forms.TabPage();
             this.Ayuda = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabOpcionesMenu = new MaterialSkin.Controls.MaterialTabSelector();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.lblAcercaDeSistema = new MaterialSkin.Controls.MaterialLabel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            webBrowser1 = new System.Windows.Forms.WebBrowser();
+            this.btnSalir = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnProductos = new System.Windows.Forms.Button();
+            this.btnClientes = new System.Windows.Forms.Button();
+            this.btnCategorias = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btnAcercaDe = new System.Windows.Forms.Button();
+            this.btnAyuda = new System.Windows.Forms.Button();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.PnlPrincipal.SuspendLayout();
             this.PnlContenedor.SuspendLayout();
             this.PnlMenu.SuspendLayout();
             this.TpbMenu.SuspendLayout();
             this.Principal.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.Tablas.SuspendLayout();
+            this.Acerca.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // PnlPrincipal
@@ -82,6 +80,14 @@
             this.PnlContenedor.Name = "PnlContenedor";
             this.PnlContenedor.Size = new System.Drawing.Size(875, 591);
             this.PnlContenedor.TabIndex = 1;
+            // 
+            // panel1
+            // 
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(873, 589);
+            this.panel1.TabIndex = 0;
             // 
             // PnlMenu
             // 
@@ -121,38 +127,12 @@
             this.Principal.TabIndex = 0;
             this.Principal.Text = "Principal";
             // 
-            // btnSalir
-            // 
-            this.btnSalir.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnSalir.FlatAppearance.BorderSize = 0;
-            this.btnSalir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnSalir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalir.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalir.ForeColor = System.Drawing.Color.White;
-            this.btnSalir.Image = global::Plantilla_Sistema_facturacion.Properties.Resources.logout;
-            this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSalir.Location = new System.Drawing.Point(84, 327);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(132, 49);
-            this.btnSalir.TabIndex = 1;
-            this.btnSalir.Text = "Salir";
-            this.btnSalir.UseVisualStyleBackColor = true;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Plantilla_Sistema_facturacion.Properties.Resources.business_company_logo_C561B48365_seeklogo_com;
-            this.pictureBox1.Location = new System.Drawing.Point(9, 6);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(308, 238);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // Tablas
             // 
             this.Tablas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.Tablas.Controls.Add(this.btnProductos);
             this.Tablas.Controls.Add(this.btnClientes);
+            this.Tablas.Controls.Add(this.btnCategorias);
             this.Tablas.Controls.Add(this.pictureBox2);
             this.Tablas.Location = new System.Drawing.Point(4, 22);
             this.Tablas.Name = "Tablas";
@@ -160,34 +140,6 @@
             this.Tablas.Size = new System.Drawing.Size(320, 565);
             this.Tablas.TabIndex = 1;
             this.Tablas.Text = "Admin Tablas";
-            // 
-            // btnClientes
-            // 
-            this.btnClientes.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnClientes.FlatAppearance.BorderSize = 0;
-            this.btnClientes.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnClientes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.btnClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClientes.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClientes.ForeColor = System.Drawing.Color.White;
-            this.btnClientes.Image = global::Plantilla_Sistema_facturacion.Properties.Resources.customer;
-            this.btnClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClientes.Location = new System.Drawing.Point(39, 303);
-            this.btnClientes.Name = "btnClientes";
-            this.btnClientes.Size = new System.Drawing.Size(132, 49);
-            this.btnClientes.TabIndex = 3;
-            this.btnClientes.Text = "Clientes";
-            this.btnClientes.UseVisualStyleBackColor = true;
-            this.btnClientes.Click += new System.EventHandler(this.btnClientes_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::Plantilla_Sistema_facturacion.Properties.Resources.business_company_logo_C561B48365_seeklogo_com;
-            this.pictureBox2.Location = new System.Drawing.Point(9, 6);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(424, 238);
-            this.pictureBox2.TabIndex = 2;
-            this.pictureBox2.TabStop = false;
             // 
             // Facturacion
             // 
@@ -210,6 +162,9 @@
             // Acerca
             // 
             this.Acerca.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.Acerca.Controls.Add(this.btnAcercaDe);
+            this.Acerca.Controls.Add(this.btnAyuda);
+            this.Acerca.Controls.Add(this.pictureBox3);
             this.Acerca.Location = new System.Drawing.Point(4, 22);
             this.Acerca.Name = "Acerca";
             this.Acerca.Size = new System.Drawing.Size(320, 565);
@@ -245,77 +200,145 @@
             this.tabOpcionesMenu.Size = new System.Drawing.Size(696, 23);
             this.tabOpcionesMenu.TabIndex = 1;
             // 
-            // panel1
+            // btnSalir
             // 
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(webBrowser1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(873, 589);
-            this.panel1.TabIndex = 0;
+            this.btnSalir.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnSalir.FlatAppearance.BorderSize = 0;
+            this.btnSalir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnSalir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalir.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalir.ForeColor = System.Drawing.Color.White;
+            this.btnSalir.Image = global::Plantilla_Sistema_facturacion.Properties.Resources.logout;
+            this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSalir.Location = new System.Drawing.Point(0, 327);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(321, 49);
+            this.btnSalir.TabIndex = 1;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
-            // webBrowser1
+            // pictureBox1
             // 
-            webBrowser1.Dock = System.Windows.Forms.DockStyle.Fill;
-            webBrowser1.Location = new System.Drawing.Point(0, 0);
-            webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
-            webBrowser1.Name = "webBrowser1";
-            webBrowser1.Size = new System.Drawing.Size(873, 589);
-            webBrowser1.TabIndex = 0;
-            webBrowser1.Url = new System.Uri("https://www.microsoft.com/es-co", System.UriKind.Absolute);
+            this.pictureBox1.Image = global::Plantilla_Sistema_facturacion.Properties.Resources.business_company_logo_C561B48365_seeklogo_com;
+            this.pictureBox1.Location = new System.Drawing.Point(9, 6);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(308, 238);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
-            // panel2
+            // btnProductos
             // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.button2);
-            this.panel2.Controls.Add(this.button1);
-            this.panel2.Controls.Add(this.textBox1);
-            this.panel2.Controls.Add(this.lblAcercaDeSistema);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(873, 589);
-            this.panel2.TabIndex = 1;
+            this.btnProductos.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnProductos.FlatAppearance.BorderSize = 0;
+            this.btnProductos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnProductos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.btnProductos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProductos.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProductos.ForeColor = System.Drawing.Color.White;
+            this.btnProductos.Image = global::Plantilla_Sistema_facturacion.Properties.Resources.cart;
+            this.btnProductos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnProductos.Location = new System.Drawing.Point(-4, 373);
+            this.btnProductos.Name = "btnProductos";
+            this.btnProductos.Size = new System.Drawing.Size(325, 49);
+            this.btnProductos.TabIndex = 7;
+            this.btnProductos.Text = "Productos";
+            this.btnProductos.UseVisualStyleBackColor = true;
+            this.btnProductos.Click += new System.EventHandler(this.btnProductos_Click);
             // 
-            // lblAcercaDeSistema
+            // btnClientes
             // 
-            this.lblAcercaDeSistema.AutoSize = true;
-            this.lblAcercaDeSistema.Depth = 0;
-            this.lblAcercaDeSistema.Font = new System.Drawing.Font("Roboto", 11F);
-            this.lblAcercaDeSistema.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblAcercaDeSistema.Location = new System.Drawing.Point(84, 52);
-            this.lblAcercaDeSistema.MouseState = MaterialSkin.MouseState.HOVER;
-            this.lblAcercaDeSistema.Name = "lblAcercaDeSistema";
-            this.lblAcercaDeSistema.Size = new System.Drawing.Size(293, 19);
-            this.lblAcercaDeSistema.TabIndex = 0;
-            this.lblAcercaDeSistema.Text = "ACERCA DEL SISTEMA DE FACTURACIÓN";
+            this.btnClientes.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnClientes.FlatAppearance.BorderSize = 0;
+            this.btnClientes.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnClientes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.btnClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClientes.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClientes.ForeColor = System.Drawing.Color.White;
+            this.btnClientes.Image = global::Plantilla_Sistema_facturacion.Properties.Resources.customer;
+            this.btnClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnClientes.Location = new System.Drawing.Point(0, 306);
+            this.btnClientes.Name = "btnClientes";
+            this.btnClientes.Size = new System.Drawing.Size(324, 49);
+            this.btnClientes.TabIndex = 6;
+            this.btnClientes.Text = "Clientes";
+            this.btnClientes.UseVisualStyleBackColor = true;
+            this.btnClientes.Click += new System.EventHandler(this.btnClientes_Click);
             // 
-            // textBox1
+            // btnCategorias
             // 
-            this.textBox1.Location = new System.Drawing.Point(88, 101);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(524, 306);
-            this.textBox1.TabIndex = 1;
+            this.btnCategorias.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnCategorias.FlatAppearance.BorderSize = 0;
+            this.btnCategorias.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnCategorias.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.btnCategorias.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCategorias.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCategorias.ForeColor = System.Drawing.Color.White;
+            this.btnCategorias.Image = global::Plantilla_Sistema_facturacion.Properties.Resources.stats;
+            this.btnCategorias.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCategorias.Location = new System.Drawing.Point(-4, 428);
+            this.btnCategorias.Name = "btnCategorias";
+            this.btnCategorias.Size = new System.Drawing.Size(328, 49);
+            this.btnCategorias.TabIndex = 5;
+            this.btnCategorias.Text = "Categorías";
+            this.btnCategorias.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // pictureBox2
             // 
-            this.button1.Location = new System.Drawing.Point(694, 189);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(68, 49);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.pictureBox2.Image = global::Plantilla_Sistema_facturacion.Properties.Resources.business_company_logo_C561B48365_seeklogo_com;
+            this.pictureBox2.Location = new System.Drawing.Point(9, 6);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(424, 238);
+            this.pictureBox2.TabIndex = 2;
+            this.pictureBox2.TabStop = false;
             // 
-            // button2
+            // btnAcercaDe
             // 
-            this.button2.Location = new System.Drawing.Point(694, 274);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(68, 45);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnAcercaDe.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnAcercaDe.FlatAppearance.BorderSize = 0;
+            this.btnAcercaDe.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnAcercaDe.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.btnAcercaDe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAcercaDe.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAcercaDe.ForeColor = System.Drawing.Color.White;
+            this.btnAcercaDe.Image = global::Plantilla_Sistema_facturacion.Properties.Resources.chat__1_;
+            this.btnAcercaDe.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAcercaDe.Location = new System.Drawing.Point(-4, 367);
+            this.btnAcercaDe.Name = "btnAcercaDe";
+            this.btnAcercaDe.Size = new System.Drawing.Size(328, 49);
+            this.btnAcercaDe.TabIndex = 10;
+            this.btnAcercaDe.Text = "Acerca de";
+            this.btnAcercaDe.UseVisualStyleBackColor = true;
+            this.btnAcercaDe.Click += new System.EventHandler(this.btnAcercaDe_Click);
+            // 
+            // btnAyuda
+            // 
+            this.btnAyuda.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnAyuda.FlatAppearance.BorderSize = 0;
+            this.btnAyuda.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnAyuda.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.btnAyuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAyuda.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAyuda.ForeColor = System.Drawing.Color.White;
+            this.btnAyuda.Image = global::Plantilla_Sistema_facturacion.Properties.Resources.help_web_button;
+            this.btnAyuda.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAyuda.Location = new System.Drawing.Point(-4, 297);
+            this.btnAyuda.Name = "btnAyuda";
+            this.btnAyuda.Size = new System.Drawing.Size(325, 49);
+            this.btnAyuda.TabIndex = 9;
+            this.btnAyuda.Text = "Ayuda";
+            this.btnAyuda.UseVisualStyleBackColor = true;
+            this.btnAyuda.Click += new System.EventHandler(this.btnAyuda_Click);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::Plantilla_Sistema_facturacion.Properties.Resources.business_company_logo_C561B48365_seeklogo_com;
+            this.pictureBox3.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(317, 238);
+            this.pictureBox3.TabIndex = 8;
+            this.pictureBox3.TabStop = false;
             // 
             // FrmPrincipal
             // 
@@ -333,12 +356,11 @@
             this.PnlMenu.ResumeLayout(false);
             this.TpbMenu.ResumeLayout(false);
             this.Principal.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.Tablas.ResumeLayout(false);
+            this.Acerca.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -357,15 +379,15 @@
         private System.Windows.Forms.TabPage Acerca;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button btnClientes;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel PnlContenedor;
         private System.Windows.Forms.TabPage Ayuda;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
-        private MaterialSkin.Controls.MaterialLabel lblAcercaDeSistema;
+        private System.Windows.Forms.Button btnCategorias;
+        private System.Windows.Forms.Button btnProductos;
+        private System.Windows.Forms.Button btnClientes;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button btnAcercaDe;
+        private System.Windows.Forms.Button btnAyuda;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }

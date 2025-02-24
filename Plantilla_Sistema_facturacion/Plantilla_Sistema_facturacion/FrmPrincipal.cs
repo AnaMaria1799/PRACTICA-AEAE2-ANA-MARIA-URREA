@@ -37,8 +37,26 @@ namespace Plantilla_Sistema_facturacion
 
         private void btnClientes_Click(object sender, EventArgs e)
         {
-            FrmClientes frmClientes = new FrmClientes();  
-            AbrirForm(frmClientes);
+            frmListaClientes frmListaClientes = new frmListaClientes();
+            AbrirForm(frmListaClientes);
+        }
+
+        private void btnProductos_Click(object sender, EventArgs e)
+        {
+            frmListaProductos frmListaProductos = new frmListaProductos();
+            AbrirForm(frmListaProductos);
+        }
+
+        private void btnAyuda_Click(object sender, EventArgs e)
+        {
+            frmAyuda frmAyuda = new frmAyuda();
+            AbrirForm(frmAyuda);
+        }
+
+        private void btnAcercaDe_Click(object sender, EventArgs e)
+        {
+            frmAcercaDe frmAcercaDe = new frmAcercaDe();
+            AbrirForm(frmAcercaDe);
         }
     }
 }
