@@ -64,7 +64,7 @@
             // btnActualizar
             // 
             this.btnActualizar.Depth = 0;
-            this.btnActualizar.Location = new System.Drawing.Point(611, 290);
+            this.btnActualizar.Location = new System.Drawing.Point(681, 387);
             this.btnActualizar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Primary = true;
