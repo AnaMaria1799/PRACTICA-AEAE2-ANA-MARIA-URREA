@@ -23,5 +23,11 @@ namespace Plantilla_Sistema_facturacion
             frmProductos frmProductos = new frmProductos();
             frmProductos.Show();
         }
+
+        private void btnEditarProducto_Click(object sender, EventArgs e)
+        {
+            frmProductos frmProductos = new frmProductos();
+            frmProductos.Show();
+        }
     }
 }

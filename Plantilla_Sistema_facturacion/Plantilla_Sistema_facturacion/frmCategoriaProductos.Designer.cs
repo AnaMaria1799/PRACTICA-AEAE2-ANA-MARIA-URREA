@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.BtnSalir = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.btnActualizar = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.btnGuardarCategoria = new MaterialSkin.Controls.MaterialRaisedButton();
             this.txtNombreCategoria = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.lblCategoriaProductos = new MaterialSkin.Controls.MaterialLabel();
             this.SuspendLayout();
@@ -46,17 +46,18 @@
             this.BtnSalir.Text = "Salir";
             this.BtnSalir.UseVisualStyleBackColor = true;
             // 
-            // btnActualizar
+            // btnGuardarCategoria
             // 
-            this.btnActualizar.Depth = 0;
-            this.btnActualizar.Location = new System.Drawing.Point(78, 305);
-            this.btnActualizar.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Primary = true;
-            this.btnActualizar.Size = new System.Drawing.Size(97, 29);
-            this.btnActualizar.TabIndex = 14;
-            this.btnActualizar.Text = "Actualizar";
-            this.btnActualizar.UseVisualStyleBackColor = true;
+            this.btnGuardarCategoria.Depth = 0;
+            this.btnGuardarCategoria.Location = new System.Drawing.Point(78, 305);
+            this.btnGuardarCategoria.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnGuardarCategoria.Name = "btnGuardarCategoria";
+            this.btnGuardarCategoria.Primary = true;
+            this.btnGuardarCategoria.Size = new System.Drawing.Size(97, 29);
+            this.btnGuardarCategoria.TabIndex = 14;
+            this.btnGuardarCategoria.Text = "Guardar";
+            this.btnGuardarCategoria.UseVisualStyleBackColor = true;
+            this.btnGuardarCategoria.Click += new System.EventHandler(this.btnGuardarCategoria_Click);
             // 
             // txtNombreCategoria
             // 
@@ -92,7 +93,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(398, 436);
             this.Controls.Add(this.BtnSalir);
-            this.Controls.Add(this.btnActualizar);
+            this.Controls.Add(this.btnGuardarCategoria);
             this.Controls.Add(this.txtNombreCategoria);
             this.Controls.Add(this.lblCategoriaProductos);
             this.Name = "frmCategoriaProductos";
@@ -105,7 +106,7 @@
         #endregion
 
         private MaterialSkin.Controls.MaterialRaisedButton BtnSalir;
-        private MaterialSkin.Controls.MaterialRaisedButton btnActualizar;
+        private MaterialSkin.Controls.MaterialRaisedButton btnGuardarCategoria;
         private MaterialSkin.Controls.MaterialSingleLineTextField txtNombreCategoria;
         private MaterialSkin.Controls.MaterialLabel lblCategoriaProductos;
     }

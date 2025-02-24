@@ -16,5 +16,10 @@ namespace Plantilla_Sistema_facturacion
         {
             InitializeComponent();
         }
+
+        private void btnGuardarCategoria_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

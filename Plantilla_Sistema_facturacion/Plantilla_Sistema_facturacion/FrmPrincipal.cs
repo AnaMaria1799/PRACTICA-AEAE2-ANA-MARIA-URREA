@@ -58,5 +58,41 @@ namespace Plantilla_Sistema_facturacion
             frmAcercaDe frmAcercaDe = new frmAcercaDe();
             AbrirForm(frmAcercaDe);
         }
+
+        private void btnCategorias_Click(object sender, EventArgs e)
+        {
+            frmCategoriaProductos frmCategoriaProductos = new frmCategoriaProductos();
+            AbrirForm(frmCategoriaProductos);
+        }
+
+        private void btnFacturas_Click(object sender, EventArgs e)
+        {
+            frmFacturas frmFacturas = new frmFacturas();
+            AbrirForm(frmFacturas);
+        }
+
+        private void btnInformes_Click(object sender, EventArgs e)
+        {
+            frmInformes frmInformes = new frmInformes();
+            AbrirForm(frmInformes);
+        }
+
+        private void btnEmpleados_Click(object sender, EventArgs e)
+        {
+            frmEmpleados frmEmpleados = new frmEmpleados();
+            AbrirForm(frmEmpleados);
+        }
+
+        private void btnRolEmpleados_Click(object sender, EventArgs e)
+        {
+            frmRolEmpleado frmRolEmpleado = new frmRolEmpleado();
+            AbrirForm(frmRolEmpleado);
+        }
+
+        private void btnAdminSeguridad_Click(object sender, EventArgs e)
+        {
+            frmAdminSeguridad frmAdminSeguridad = new frmAdminSeguridad();
+            AbrirForm(frmAdminSeguridad);
+        }
     }
 }
