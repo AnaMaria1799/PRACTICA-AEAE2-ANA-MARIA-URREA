@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblDatosCliente = new MaterialSkin.Controls.MaterialLabel();
             this.txtNombre = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.txtDocumento = new MaterialSkin.Controls.MaterialSingleLineTextField();
@@ -36,6 +37,8 @@
             this.txtEmail = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.btnGuardar = new MaterialSkin.Controls.MaterialRaisedButton();
             this.BtnSalir = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.campoVacioErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.campoVacioErrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // lblDatosCliente
@@ -152,6 +155,10 @@
             this.BtnSalir.UseVisualStyleBackColor = true;
             this.BtnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
             // 
+            // campoVacioErrorProvider
+            // 
+            this.campoVacioErrorProvider.ContainerControl = this;
+            // 
             // FrmClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -167,6 +174,7 @@
             this.Controls.Add(this.lblDatosCliente);
             this.Name = "FrmClientes";
             this.Text = "FrmClientes";
+            ((System.ComponentModel.ISupportInitialize)(this.campoVacioErrorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -182,5 +190,6 @@
         private MaterialSkin.Controls.MaterialSingleLineTextField txtEmail;
         private MaterialSkin.Controls.MaterialRaisedButton btnGuardar;
         private MaterialSkin.Controls.MaterialRaisedButton BtnSalir;
+        private System.Windows.Forms.ErrorProvider campoVacioErrorProvider;
     }
 }

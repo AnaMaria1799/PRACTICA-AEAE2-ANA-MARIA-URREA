@@ -19,8 +19,38 @@ namespace Plantilla_Sistema_facturacion
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            this.Close();
+            if (txtNombre.Text == "")
+            {
+                campoVacioErrorProvider.SetError(txtNombre, "El nombre no puede ser vacío");
+            }
+            else
+            {
+                campoVacioErrorProvider.SetError(txtNombre, "");
+            }
+
+
+            if (txtDocumento.Text == "")
+            {
+                campoVacioErrorProvider.SetError(txtDocumento, "El documento no puede ser vacío");
+            }
+            else
+            {
+                campoVacioErrorProvider.SetError(txtDocumento, "");
+            }
+
+
+            if (txtTelefono.Text == "")
+            {
+                campoVacioErrorProvider.SetError(txtTelefono, "El telefono no puede ser vacío");
+            }
+            else
+            {
+                campoVacioErrorProvider.SetError(txtTelefono, "");
+            }
+
         }
+
+
 
         private void BtnSalir_Click(object sender, EventArgs e)
         {
