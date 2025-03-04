@@ -43,13 +43,13 @@
             this.dgClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgClientes.Location = new System.Drawing.Point(41, 164);
             this.dgClientes.Name = "dgClientes";
-            this.dgClientes.Size = new System.Drawing.Size(414, 194);
+            this.dgClientes.Size = new System.Drawing.Size(539, 194);
             this.dgClientes.TabIndex = 17;
             // 
             // BtnSalir
             // 
             this.BtnSalir.Depth = 0;
-            this.BtnSalir.Location = new System.Drawing.Point(295, 397);
+            this.BtnSalir.Location = new System.Drawing.Point(361, 397);
             this.BtnSalir.MouseState = MaterialSkin.MouseState.HOVER;
             this.BtnSalir.Name = "BtnSalir";
             this.BtnSalir.Primary = true;
@@ -61,7 +61,7 @@
             // BtnBuscar
             // 
             this.BtnBuscar.Depth = 0;
-            this.BtnBuscar.Location = new System.Drawing.Point(268, 120);
+            this.BtnBuscar.Location = new System.Drawing.Point(339, 120);
             this.BtnBuscar.MouseState = MaterialSkin.MouseState.HOVER;
             this.BtnBuscar.Name = "BtnBuscar";
             this.BtnBuscar.Primary = true;
@@ -81,7 +81,7 @@
             this.txtBuscar.SelectedText = "";
             this.txtBuscar.SelectionLength = 0;
             this.txtBuscar.SelectionStart = 0;
-            this.txtBuscar.Size = new System.Drawing.Size(193, 23);
+            this.txtBuscar.Size = new System.Drawing.Size(266, 23);
             this.txtBuscar.TabIndex = 14;
             this.txtBuscar.UseSystemPasswordChar = false;
             // 
@@ -101,20 +101,20 @@
             // btnNuevoCliente
             // 
             this.btnNuevoCliente.Depth = 0;
-            this.btnNuevoCliente.Location = new System.Drawing.Point(418, 120);
+            this.btnNuevoCliente.Location = new System.Drawing.Point(460, 120);
             this.btnNuevoCliente.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnNuevoCliente.Name = "btnNuevoCliente";
             this.btnNuevoCliente.Primary = true;
-            this.btnNuevoCliente.Size = new System.Drawing.Size(74, 26);
+            this.btnNuevoCliente.Size = new System.Drawing.Size(120, 26);
             this.btnNuevoCliente.TabIndex = 18;
-            this.btnNuevoCliente.Text = "Nuevo";
+            this.btnNuevoCliente.Text = "Nuevo cliente";
             this.btnNuevoCliente.UseVisualStyleBackColor = true;
             this.btnNuevoCliente.Click += new System.EventHandler(this.btnNuevoCliente_Click);
             // 
             // btnEditarCliente
             // 
             this.btnEditarCliente.Depth = 0;
-            this.btnEditarCliente.Location = new System.Drawing.Point(489, 244);
+            this.btnEditarCliente.Location = new System.Drawing.Point(179, 397);
             this.btnEditarCliente.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnEditarCliente.Name = "btnEditarCliente";
             this.btnEditarCliente.Primary = true;
@@ -128,7 +128,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(592, 445);
+            this.ClientSize = new System.Drawing.Size(618, 445);
             this.Controls.Add(this.btnEditarCliente);
             this.Controls.Add(this.btnNuevoCliente);
             this.Controls.Add(this.dgClientes);

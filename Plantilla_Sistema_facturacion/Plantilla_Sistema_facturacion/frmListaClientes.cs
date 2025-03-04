@@ -16,6 +16,26 @@ namespace Plantilla_Sistema_facturacion
         {
             InitializeComponent();
         }
+        DataTable dt = new DataTable();
+        Acceso_datos Acceso = new Acceso_datos();
+
+        private void LLENAR_GRID()
+        {
+            dgClientes.Rows.Clear();
+
+            string sentencia = $"SELECT IdClientes, StrNombre, NumDocumento, StrTelefono FROM TBLCLIENTES";
+            dt = Acceso.EjecutarComandoDatos(sentencia);
+
+            foreach (DataRow row in dt.Rows) 
+            {
+                dgClientes.Rows.Add(row[0], row[1], row[2], row[3]);
+            }
+        }
+
+        private void frmListaClientes_Load(object sender, EventArgs e)
+        {
+            LLENAR_GRID();
+        }
 
         private void btnNuevoCliente_Click(object sender, EventArgs e)
         {
