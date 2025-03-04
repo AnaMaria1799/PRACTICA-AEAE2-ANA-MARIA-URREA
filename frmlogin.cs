@@ -35,9 +35,41 @@ namespace Plantilla_Sistema_facturacion
 
         private void btnValidar_Click(object sender, EventArgs e)
         {
+            string Respuesta = "";
+
+            if(TxtUsuario.Text != "" && TxtPasword.Text != string.Empty)
+            {
+                Acceso_datos acceso = new Acceso_datos();
+                Respuesta = acceso.ValidarUsuario(TxtUsuario.Text, TxtPasword.Text);
+
+                if(Respuesta !="")
+                {
+                    MessageBox.Show("Bienvenido: " + Respuesta);
+                    FrmPrincipal frmPrincipal = new FrmPrincipal();
+                    this.Hide();
+                    frmPrincipal.Show();
+                }
+                else
+                {
+                    MessageBox.Show("USUARIO Y CLAVE NO ENCONTRADOS");
+                    TxtUsuario.Text = "";
+                    TxtUsuario.Focus();
+                    TxtPasword.Text = "";
+                }
+            }
+            else
+            {
+                MessageBox.Show("Debes ingresar un usuario y una clave");
+            }
+
             FrmPrincipal frmppal = new FrmPrincipal();
             this.Hide();
                     frmppal.Show();
+        }
+
+        private void TxtUsuario_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

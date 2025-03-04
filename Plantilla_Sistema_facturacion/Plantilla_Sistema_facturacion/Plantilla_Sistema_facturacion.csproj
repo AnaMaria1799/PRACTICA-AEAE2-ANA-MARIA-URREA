@@ -57,6 +57,7 @@
       <DependentUpon>frmlogin.cs</DependentUpon>
       <Link>frmlogin.Designer.cs</Link>
     </Compile>
+    <Compile Include="Acceso_datos.cs" />
     <Compile Include="frmAcercaDe.cs">
       <SubType>Form</SubType>
     </Compile>

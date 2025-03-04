@@ -33,7 +33,7 @@
             this.TxtPasword = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.btnValidar = new MaterialSkin.Controls.MaterialRaisedButton();
             this.btnCancelar = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.TxtTitulo = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.TxtUsuario = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.lblTitulo = new MaterialSkin.Controls.MaterialLabel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -101,20 +101,21 @@
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // TxtTitulo
+            // TxtUsuario
             // 
-            this.TxtTitulo.Depth = 0;
-            this.TxtTitulo.Hint = "Usuario";
-            this.TxtTitulo.Location = new System.Drawing.Point(282, 73);
-            this.TxtTitulo.MouseState = MaterialSkin.MouseState.HOVER;
-            this.TxtTitulo.Name = "TxtTitulo";
-            this.TxtTitulo.PasswordChar = '\0';
-            this.TxtTitulo.SelectedText = "";
-            this.TxtTitulo.SelectionLength = 0;
-            this.TxtTitulo.SelectionStart = 0;
-            this.TxtTitulo.Size = new System.Drawing.Size(171, 23);
-            this.TxtTitulo.TabIndex = 6;
-            this.TxtTitulo.UseSystemPasswordChar = false;
+            this.TxtUsuario.Depth = 0;
+            this.TxtUsuario.Hint = "Usuario";
+            this.TxtUsuario.Location = new System.Drawing.Point(282, 73);
+            this.TxtUsuario.MouseState = MaterialSkin.MouseState.HOVER;
+            this.TxtUsuario.Name = "TxtUsuario";
+            this.TxtUsuario.PasswordChar = '\0';
+            this.TxtUsuario.SelectedText = "";
+            this.TxtUsuario.SelectionLength = 0;
+            this.TxtUsuario.SelectionStart = 0;
+            this.TxtUsuario.Size = new System.Drawing.Size(171, 23);
+            this.TxtUsuario.TabIndex = 6;
+            this.TxtUsuario.UseSystemPasswordChar = false;
+            this.TxtUsuario.Click += new System.EventHandler(this.TxtUsuario_Click);
             // 
             // lblTitulo
             // 
@@ -136,7 +137,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ClientSize = new System.Drawing.Size(550, 250);
             this.Controls.Add(this.lblTitulo);
-            this.Controls.Add(this.TxtTitulo);
+            this.Controls.Add(this.TxtUsuario);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnValidar);
             this.Controls.Add(this.TxtPasword);
@@ -160,7 +161,7 @@
         private MaterialSkin.Controls.MaterialSingleLineTextField TxtPasword;
         private MaterialSkin.Controls.MaterialRaisedButton btnValidar;
         private MaterialSkin.Controls.MaterialRaisedButton btnCancelar;
-        private MaterialSkin.Controls.MaterialSingleLineTextField TxtTitulo;
+        private MaterialSkin.Controls.MaterialSingleLineTextField TxtUsuario;
         private MaterialSkin.Controls.MaterialLabel lblTitulo;
     }
 }
