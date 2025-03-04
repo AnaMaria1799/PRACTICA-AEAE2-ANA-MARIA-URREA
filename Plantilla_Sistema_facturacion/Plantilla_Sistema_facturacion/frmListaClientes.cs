@@ -40,7 +40,12 @@ namespace Plantilla_Sistema_facturacion
         private void btnNuevoCliente_Click(object sender, EventArgs e)
         {
             FrmClientes frmClientes = new FrmClientes();
-            frmClientes.Show();
+            Cliente.IdCliente = 0;
+            dgClientes.ShowDialog();
+            LLENAR_GRID():
+
+        
+            
         }
 
         private void btnEditarCliente_Click(object sender, EventArgs e)
@@ -65,6 +70,11 @@ namespace Plantilla_Sistema_facturacion
             {
                 LLENAR_GRID();
             }
+        }
+
+        private void dgClientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
