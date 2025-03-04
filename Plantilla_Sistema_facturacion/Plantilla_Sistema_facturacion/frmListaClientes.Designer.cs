@@ -69,6 +69,7 @@
             this.BtnBuscar.TabIndex = 15;
             this.BtnBuscar.Text = "Buscar";
             this.BtnBuscar.UseVisualStyleBackColor = true;
+            this.BtnBuscar.Click += new System.EventHandler(this.BtnBuscar_Click);
             // 
             // txtBuscar
             // 

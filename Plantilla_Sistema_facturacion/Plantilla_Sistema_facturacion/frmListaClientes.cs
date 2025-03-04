@@ -48,5 +48,23 @@ namespace Plantilla_Sistema_facturacion
             FrmClientes frmClientes = new FrmClientes();
             frmClientes.Show();
         }
+
+        private void BtnBuscar_Click(object sender, EventArgs e)
+        {
+            if (txtBuscar.Text !="")
+            {
+                dgClientes.Rows.Clear();
+
+                string sentencia = $"select from TBLCLIENTES where strNombre like '%{txtBuscar.Text}%'";
+                dt = Acceso.EjecutarComandoDatos(sentencia);
+
+                foreach (DataRow row in dt.Rows) { dgClientes.Rows.Add(row[0], row[1], row[2], row[3]); }
+                txtBuscar.Text = "";
+            }
+            else
+            {
+                LLENAR_GRID();
+            }
+        }
     }
 }
