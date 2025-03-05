@@ -58,6 +58,7 @@
             this.BtnSalir.TabIndex = 16;
             this.BtnSalir.Text = "Salir";
             this.BtnSalir.UseVisualStyleBackColor = true;
+            this.BtnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
             // 
             // BtnBuscar
             // 
