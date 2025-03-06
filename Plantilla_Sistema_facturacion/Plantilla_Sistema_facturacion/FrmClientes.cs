@@ -127,5 +127,10 @@ namespace Plantilla_Sistema_facturacion
         {
             this.Close();
         }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            validar();
+        }
     }
 }
