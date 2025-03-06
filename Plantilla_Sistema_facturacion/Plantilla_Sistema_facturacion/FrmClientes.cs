@@ -104,6 +104,31 @@ namespace Plantilla_Sistema_facturacion
                 return errorCampos;
         }
 
+        //Funcion para validar si un numero dado es numerico
+
+        private bool esNumerico(string num)
+        {
+            try
+            {
+                double x = Convert.ToDouble(num);
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            Guardar();
+        }
+
+        private void btn_Salir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+    }
+}
 
 
 
@@ -112,7 +137,8 @@ namespace Plantilla_Sistema_facturacion
 
 
 
-        private void btnGuardar_Click(object sender, EventArgs e)
+
+private void btnGuardar_Click(object sender, EventArgs e)
         {
             if (txtNombre.Text == "")
             {
