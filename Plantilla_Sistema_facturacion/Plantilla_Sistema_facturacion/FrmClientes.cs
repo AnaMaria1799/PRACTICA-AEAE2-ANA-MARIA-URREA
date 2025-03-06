@@ -61,8 +61,7 @@ namespace Plantilla_Sistema_facturacion
                 try
                 {
                     Acceso_datos Acceso = new Acceso_datos();
-                    string sentencia = $"Exec [actualizar_Cliente] {IdCliente},'{txtNombre.Text}',{TxtDocumento.Text} ,'{txtDireccion.Text}','{txtTelefono.Text}', '{txtEmail.Text}'
-                   ,'Javier','{DateTime.Now.ToShortDateString()}'";
+                    string sentencia = $"Exec [actualizar_Cliente] {IdCliente},'{txtNombre.Text}',{txtDocumento.Text} ,'{txtDireccion.Text}','{txtTelefono.Text}', '{txtEmail.Text}','Javier','{DateTime.Now.ToShortDateString()}'";
                 MessageBox.Show(Acceso.EjecutarComando(sentencia));
                     actualizado = true;
                 }
@@ -81,22 +80,23 @@ namespace Plantilla_Sistema_facturacion
             Boolean errorCampos = true;
             if (txtNombre.Text == string.Empty)
             {
-                campoVacioErrorProvider.SetError(txtNombre, "debeingresar el nombre del Cliente");
+                campoVacioErrorProvider.SetError(txtNombre, "Debe ingresar el nombre del cliente");
                 txtNombre.Focus();
                 errorCampos = false;
             }
             else { campoVacioErrorProvider.SetError(txtNombre, ""); }
+
             if (txtDocumento.Text == "")
             {
-                campoVacioErrorProvider.SetError(txtDocumento, "debe ingresar el documento");
-                campoVacioErrorProvider.Focus();
+                campoVacioErrorProvider.SetError(txtDocumento, "Debe ingresar el documento");
+                txtDocumento.Focus();
                 errorCampos = false;
             }
             else { campoVacioErrorProvider.SetError(txtDocumento, ""); }
 
             if (!esNumerico(txtDocumento.Text))
             {
-                campoVacioErrorProvider.SetError(txtDocumento, "El Documento debe ser numerico");
+                campoVacioErrorProvider.SetError(txtDocumento, "El documento debe ser numerico");
                 txtDocumento.Focus();
                 return false;
             }
@@ -124,56 +124,6 @@ namespace Plantilla_Sistema_facturacion
         }
 
         private void btn_Salir_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-    }
-}
-
-
-
-
-
-
-
-
-
-private void btnGuardar_Click(object sender, EventArgs e)
-        {
-            if (txtNombre.Text == "")
-            {
-                campoVacioErrorProvider.SetError(txtNombre, "El nombre no puede ser vacío");
-            }
-            else
-            {
-                campoVacioErrorProvider.SetError(txtNombre, "");
-            }
-
-
-            if (txtDocumento.Text == "")
-            {
-                campoVacioErrorProvider.SetError(txtDocumento, "El documento no puede ser vacío");
-            }
-            else
-            {
-                campoVacioErrorProvider.SetError(txtDocumento, "");
-            }
-
-
-            if (txtTelefono.Text == "")
-            {
-                campoVacioErrorProvider.SetError(txtTelefono, "El telefono no puede ser vacío");
-            }
-            else
-            {
-                campoVacioErrorProvider.SetError(txtTelefono, "");
-            }
-
-        }
-
-
-
-        private void BtnSalir_Click(object sender, EventArgs e)
         {
             this.Close();
         }

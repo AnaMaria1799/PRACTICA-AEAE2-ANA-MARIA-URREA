@@ -40,8 +40,8 @@ namespace Plantilla_Sistema_facturacion
         private void btnNuevoCliente_Click(object sender, EventArgs e)
         {
             FrmClientes frmClientes = new FrmClientes();
-            dgClientes.IdCliente = 0;
-            dgClientes.ShowDialog();
+            frmClientes.IdCliente = 0;
+            frmClientes.ShowDialog();
             LLENAR_GRID();
         }
 
