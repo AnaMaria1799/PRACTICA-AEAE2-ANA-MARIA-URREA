@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -56,5 +57,42 @@ namespace Plantilla_Sistema_facturacion
             }
             return errorCampos;
         }
+
+    // Metodo para validar si los valores son numericos
+    private bool IsNumeric(string num)
+        {
+            try
+            {
+                double x = Convert.ToDouble(num);
+                return true;
+            }
+            catch (Exception)
+            { return false;
+        }
+
+            //funcion que permite guardar los datos de ingreso a un usuario
+           Public bool Guardar()
+            {
+                Boolean Actualizado = false;
+                if (validar())
+                {
+                    try
+                    {
+                        Acceso_datos Acceso = new Acceso_datos();
+                        string sentencia = $"Exec actualizar_Seguridad '{Convert.ToInt32(cboEmpleado.SelectedValue)}','{txtUsuarioSistema.Text}','{txtClaveSistema.Text}','{DateTime.Now}','Javier'";
+                        MessageBox.Show(Acceso.EjecutarComando(sentencia));
+                        Actualizado = true;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("falló inserción: " + ex);
+                        Actualizado = false;
+                    }
+                }
+                return Actualizado;
+            }
+
+            // Funcion que permite eliminar los datos de ingreso de un usuario
+            Public void Eliminar()
     }
 }
