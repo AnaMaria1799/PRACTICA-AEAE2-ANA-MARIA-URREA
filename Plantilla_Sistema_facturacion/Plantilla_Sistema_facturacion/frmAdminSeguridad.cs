@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Text;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
@@ -121,5 +122,20 @@ namespace Plantilla_Sistema_facturacion
                     txtClaveSistema.Text = "";
                 }
             }
-    }
+
+            private void FrmAdminSeguridad_Load(object sender, EventArgs e)
+            {
+                llenar_combo_empleados();
+            }
+
 }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+    
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+
+        }
