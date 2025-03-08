@@ -16,5 +16,45 @@ namespace Plantilla_Sistema_facturacion
         {
             InitializeComponent();
         }
+
+        private void llenar_combo_empleados()
+        {
+            DataTable dt = new DataTable();
+            Acceso_datos Acceso = new Acceso_datos();
+            dt = Acceso.cargartabla("TBLEMPLEADO", "");
+            
+            cboEmpleado.DataSource = dt;
+            cboEmpleado.DisplayMember = "strNombre";
+            cboEmpleado.ValueMember = "IdEmpleado";
+            Acceso.CerrarBd();
+        }
+
+        private Boolean validar ()
+        {
+            Boolean errorCampos = true;
+            if (txtUsuarioSistema.Text == string.Empty)
+            {
+
+                campoErrorProvider.SetError(txtUsuarioSistema, "Debe ingresar un usuario");
+                txtUsuarioSistema.Focus();
+                errorCampos = false;
+            }
+            else
+            {
+                campoErrorProvider.SetError(txtUsuarioSistema, "");
+            }
+
+            if (txtClaveSistema.Text == "")
+            {
+                campoErrorProvider.SetError(txtClaveSistema, "Debe ingresar un valor de cédula");
+                txtClaveSistema.Focus();
+                errorCampos = false;
+            }
+            else
+            {
+                campoErrorProvider.SetError(txtClaveSistema, "");
+            }
+            return errorCampos;
+        }
     }
 }

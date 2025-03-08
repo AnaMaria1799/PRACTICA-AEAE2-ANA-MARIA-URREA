@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblAdmiUsuarioSistema = new MaterialSkin.Controls.MaterialLabel();
             this.lblEmpleado = new MaterialSkin.Controls.MaterialLabel();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -37,6 +38,8 @@
             this.btnActualizar = new MaterialSkin.Controls.MaterialRaisedButton();
             this.btnNuevoEmpleado = new MaterialSkin.Controls.MaterialRaisedButton();
             this.btnEliminar = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.campoErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.campoErrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // lblAdmiUsuarioSistema
@@ -106,7 +109,7 @@
             // BtnSalir
             // 
             this.BtnSalir.Depth = 0;
-            this.BtnSalir.Location = new System.Drawing.Point(264, 344);
+            this.BtnSalir.Location = new System.Drawing.Point(280, 366);
             this.BtnSalir.MouseState = MaterialSkin.MouseState.HOVER;
             this.BtnSalir.Name = "BtnSalir";
             this.BtnSalir.Primary = true;
@@ -151,6 +154,10 @@
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
             // 
+            // campoErrorProvider
+            // 
+            this.campoErrorProvider.ContainerControl = this;
+            // 
             // frmAdminSeguridad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -167,6 +174,7 @@
             this.Controls.Add(this.lblAdmiUsuarioSistema);
             this.Name = "frmAdminSeguridad";
             this.Text = "frmAdminSeguridad";
+            ((System.ComponentModel.ISupportInitialize)(this.campoErrorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -183,5 +191,6 @@
         private MaterialSkin.Controls.MaterialRaisedButton btnActualizar;
         private MaterialSkin.Controls.MaterialRaisedButton btnNuevoEmpleado;
         private MaterialSkin.Controls.MaterialRaisedButton btnEliminar;
+        private System.Windows.Forms.ErrorProvider campoErrorProvider;
     }
 }
