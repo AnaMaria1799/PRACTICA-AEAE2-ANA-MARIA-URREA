@@ -35,6 +35,8 @@
             this.txtUsuarioSistema = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.BtnSalir = new MaterialSkin.Controls.MaterialRaisedButton();
             this.btnActualizar = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.btnNuevoEmpleado = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.btnEliminar = new MaterialSkin.Controls.MaterialRaisedButton();
             this.SuspendLayout();
             // 
             // lblAdmiUsuarioSistema
@@ -75,7 +77,7 @@
             // 
             this.txtClaveSistema.Depth = 0;
             this.txtClaveSistema.Hint = "Clave";
-            this.txtClaveSistema.Location = new System.Drawing.Point(156, 254);
+            this.txtClaveSistema.Location = new System.Drawing.Point(156, 245);
             this.txtClaveSistema.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtClaveSistema.Name = "txtClaveSistema";
             this.txtClaveSistema.PasswordChar = '\0';
@@ -90,7 +92,7 @@
             // 
             this.txtUsuarioSistema.Depth = 0;
             this.txtUsuarioSistema.Hint = "Usuario";
-            this.txtUsuarioSistema.Location = new System.Drawing.Point(156, 211);
+            this.txtUsuarioSistema.Location = new System.Drawing.Point(156, 202);
             this.txtUsuarioSistema.MouseState = MaterialSkin.MouseState.HOVER;
             this.txtUsuarioSistema.Name = "txtUsuarioSistema";
             this.txtUsuarioSistema.PasswordChar = '\0';
@@ -116,7 +118,7 @@
             // btnActualizar
             // 
             this.btnActualizar.Depth = 0;
-            this.btnActualizar.Location = new System.Drawing.Point(112, 344);
+            this.btnActualizar.Location = new System.Drawing.Point(507, 202);
             this.btnActualizar.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Primary = true;
@@ -125,12 +127,38 @@
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.UseVisualStyleBackColor = true;
             // 
+            // btnNuevoEmpleado
+            // 
+            this.btnNuevoEmpleado.Depth = 0;
+            this.btnNuevoEmpleado.Location = new System.Drawing.Point(507, 146);
+            this.btnNuevoEmpleado.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnNuevoEmpleado.Name = "btnNuevoEmpleado";
+            this.btnNuevoEmpleado.Primary = true;
+            this.btnNuevoEmpleado.Size = new System.Drawing.Size(97, 29);
+            this.btnNuevoEmpleado.TabIndex = 34;
+            this.btnNuevoEmpleado.Text = "Nuevo";
+            this.btnNuevoEmpleado.UseVisualStyleBackColor = true;
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Depth = 0;
+            this.btnEliminar.Location = new System.Drawing.Point(507, 266);
+            this.btnEliminar.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Primary = true;
+            this.btnEliminar.Size = new System.Drawing.Size(97, 29);
+            this.btnEliminar.TabIndex = 34;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            // 
             // frmAdminSeguridad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(469, 433);
+            this.ClientSize = new System.Drawing.Size(656, 433);
             this.Controls.Add(this.BtnSalir);
+            this.Controls.Add(this.btnNuevoEmpleado);
+            this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.txtClaveSistema);
             this.Controls.Add(this.txtUsuarioSistema);
@@ -153,5 +181,7 @@
         private MaterialSkin.Controls.MaterialSingleLineTextField txtUsuarioSistema;
         private MaterialSkin.Controls.MaterialRaisedButton BtnSalir;
         private MaterialSkin.Controls.MaterialRaisedButton btnActualizar;
+        private MaterialSkin.Controls.MaterialRaisedButton btnNuevoEmpleado;
+        private MaterialSkin.Controls.MaterialRaisedButton btnEliminar;
     }
 }
