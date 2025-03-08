@@ -94,5 +94,32 @@ namespace Plantilla_Sistema_facturacion
 
             // Funcion que permite eliminar los datos de ingreso de un usuario
             Public void Eliminar()
+            {
+                Acceso_datos Acceso = new Acceso_datos();
+                string sentencia = $"Exec Eliminar_Seguridad '{Convert.ToInt32(cboEmpleado.SelectValue)}'";
+                MessageBox.Show(Acceso.EjecutarComando(sentencia));
+                txtUsuarioSistema.Text = "";
+                txtClaveSistema.Text = "";
+            }
+
+            // Funcion que permite consultar los datos de ingreso de un usuario
+            Public void Consultar ()
+            {
+                DataTable dt = new DataTable();
+                string sentencia = "select StrUsuario, StrClave from TBLSEGURIDAD where IdEmpleado=" + cboEmpleado.SelectedValue.ToString();
+                Acceso_datos Acceso = new Acceso_datos();
+                dt = Acceso.EjecutarComandoDatos(sentencia);
+                if (dt.Rows.Count > 0)
+                {
+                    txtUsuarioSistema.Text = dt.Rows[0]["StrUsuario"].ToString();
+                    txtClaveSistema.Text = dt.Rows[0]["StrClave"].ToString();
+                }
+                else
+                {
+                    MessageBox.Show("El usuario no disponible de datos de ingreso");
+                    txtUsuarioSistema.Text = "";
+                    txtClaveSistema.Text = "";
+                }
+            }
     }
 }
